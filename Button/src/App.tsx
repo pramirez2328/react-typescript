@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Button from './components/Button';
 import Alert from './components/Alert';
-import 'bootstrap/dist/css/bootstrap.css';
 const colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'];
 
 const App = () => {
@@ -18,7 +17,7 @@ const App = () => {
   };
   return (
     <div
-      className={`d-flex flex-column justify-content-center align-content-center mt-5  bg-${color} p-4`}
+      className={`d-flex flex-column justify-content-center align-content-center mt-5  bg-${color} p-4 col-8 m-auto`}
       style={{ border: '1px solid black' }}
     >
       <Button type={color} handleClick={handleClick}>
