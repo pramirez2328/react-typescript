@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #f70606;
+  --secondary-color: #e9d5d5;
+  --border-radius: 5px;
+}
+
+.navBar {
+  background-color: aliceblue;
+  width: 100%;
+  padding: 2em 3em;
+  background-color: var(--secondary-color);
+}
+
+.ulContainer {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.liBullet {
+  color: var(--primary-color);
+}
