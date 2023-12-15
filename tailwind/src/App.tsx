@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { WiEarthquake } from 'react-icons/wi';
+
 function App() {
   const [count, setCount] = useState(0);
 
