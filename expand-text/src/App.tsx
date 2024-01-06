@@ -1,28 +1,29 @@
 import { useState } from 'react';
-import { message } from './message';
-
+import { book } from './book';
 import './App.css';
 
 function App() {
   const [expand, setExpand] = useState(true);
   const [chapter, setChapter] = useState(2);
-  const [text, setText] = useState(message.split('.')[0] + '. ');
+  const [text, setText] = useState(book.split('.')[0] + '. ');
 
   const handleExpand = () => {
-    let trimmedText = message.split('.').slice(0, chapter).join('.');
-    if (trimmedText.length < message.length) {
-      trimmedText += trimmedText.length < message.length - 1 ? '... ' : '.';
+    let trimmedText = book.split('.').slice(0, chapter).join('.');
+
+    if (trimmedText.length < book.length) {
+      trimmedText += trimmedText.length < book.length - 1 ? '... ' : '.';
       setText(trimmedText);
       setChapter(chapter + 1);
     }
-    if (trimmedText.length === message.length) {
+
+    if (trimmedText.length === book.length) {
       setExpand(false);
     }
 
     if (!expand) {
       setExpand(true);
       setChapter(2);
-      setText(message.split('.')[0] + '. ');
+      setText(book.split('.')[0] + '. ');
     }
   };
 
